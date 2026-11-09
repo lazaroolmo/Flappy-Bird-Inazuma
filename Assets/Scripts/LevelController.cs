@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class LevelController : MonoBehaviour
 {
     bool isReload = false;
-    float reloadLapseTime = 2f; // TIEMPO DE ESPERA ANTES DE REINICIAR 2s
+    float reloadLapseTime = 1f; // TIEMPO DE ESPERA ANTES DE REINICIAR 1s
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,7 +26,12 @@ public class LevelController : MonoBehaviour
         isReload = true;
     }
 
-    void ReloadLevel()
+    public void LoadNextLevel()
+    {
+        int CurrentScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene((CurrentScene + 1) % SceneManager.sceneCountInBuildSettings) ;
+    }
+    public void ReloadLevel()
     {
         int CurrentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(CurrentScene);
