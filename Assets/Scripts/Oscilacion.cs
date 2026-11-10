@@ -18,10 +18,10 @@ public class Oscilacion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (alive)
+        if (alive) // PARA EVITAR OSCILACIÓN AL MORIR
         {
-            float movimiento = Mathf.Sin((Time.time * velocidad + desfase) * fuerza);
-            transform.position = posicionInicial + new Vector3(0 , movimiento , 0);
+            float movimiento = Mathf.Sin((Time.time * velocidad + desfase) * fuerza); // VARIABLE SENO
+            transform.position = posicionInicial + new Vector3(0 , movimiento , 0); // MUEVE EN EL EJE Y
         }
 
     }

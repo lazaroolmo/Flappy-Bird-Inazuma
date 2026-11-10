@@ -19,7 +19,7 @@ public class Balón : MonoBehaviour
         {
             ScoreBoardManager scoreBoardManager = FindAnyObjectByType<ScoreBoardManager>();
             if (scoreBoardManager) scoreBoardManager.IncreaseScore(3);
-            Destroy(this.gameObject);
+            Destroy(this.gameObject); // PARA QUE DESAPAREZCA EL OBJETO
         }
 
     }

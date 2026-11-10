@@ -19,7 +19,7 @@ public class TriggerActivatorMountain : MonoBehaviour
         // SI EL QUE HA ACTIVADO EL TRIGGER ES EL PLAYER
         if(other.CompareTag("Player"))
         {
-            // BUSCA EN EL PADRE LA VARIABLE A ACTIVAR
+            // BUSCA EN EL PADRE (MOVIMIENTO HORIZONTAL) LA VARIABLE A ACTIVAR
             GetComponentInParent<Tiritar>().trigger_pasado = true;
         }
     }

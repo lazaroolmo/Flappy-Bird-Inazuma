@@ -2,7 +2,19 @@ using UnityEngine;
 
 public class VictoriaController : MonoBehaviour
 {
-    [SerializeField] GameObject textoDeVictoria; // Aquí arrastraremos el texto oculto
+    [SerializeField] GameObject textoDeVictoria;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,7 +27,7 @@ public class VictoriaController : MonoBehaviour
                 textoDeVictoria.SetActive(true);
             }
 
-            // CONFIRMAMOS LOS PUNTOS
+            // CONFIRMAMOS LOS PUNTOS PONIENDOLOS COMO CHECKPOINT
             if (SeguidordePuntos.Instancia != null)
             {
                 SeguidordePuntos.Instancia.ConfirmarPuntos();

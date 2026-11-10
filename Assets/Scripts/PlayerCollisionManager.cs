@@ -14,9 +14,9 @@ public class PlayerCollisionManager : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision) // CUANDO SE ENTRE EN UNA COLISIÓN
     {
-        if (collision.gameObject.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("Obstacle")) // SI LA COLISIÓN ES CON UN OBSTÁCULO
         {
             GetComponent<PlayerInputController>().alive = false; // PARA QUE NO DEJE SALTAR EL PLAYER
 
@@ -51,9 +51,9 @@ public class PlayerCollisionManager : MonoBehaviour
     {
         LevelController levelController = FindAnyObjectByType<LevelController>();
 
-        if(levelController != null)
+        if(levelController != null) 
         {
-            levelController.TriggerReloadLevel();
+            levelController.TriggerReloadLevel(); // LLAMA AL REINICIO DE NIVEL
         }
         else
         {

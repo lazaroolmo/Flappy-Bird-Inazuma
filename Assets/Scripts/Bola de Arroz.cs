@@ -19,7 +19,7 @@ public class BoladeArroz : MonoBehaviour
         {
             ScoreBoardManager scoreBoardManager = FindAnyObjectByType<ScoreBoardManager>();
             if (scoreBoardManager) scoreBoardManager.IncreaseScore(1);
-            Destroy(this.gameObject);
+            Destroy(this.gameObject); // PARA QUE DESAPAREZCA EL OBJETO
         }
 
     }

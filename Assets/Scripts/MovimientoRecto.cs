@@ -15,7 +15,7 @@ public class MovimientoRecto : MonoBehaviour
     {
         if(trigger_pasado == true)
         {
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
+            transform.Translate(Vector3.up * speed * Time.deltaTime); // MOVIMIENTO HACIA ARRIBA
         }
     }
 }

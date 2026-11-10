@@ -16,11 +16,12 @@ public class NextLevelCollisionController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // BUSCA EN LevelController
         LevelController levelController = FindAnyObjectByType<LevelController>();
-        if (levelController)
+        if (levelController) // SI NO ES NULO
         {
-            SeguidordePuntos.Instancia.ConfirmarPuntos();
-            levelController.LoadNextLevel();
+            SeguidordePuntos.Instancia.ConfirmarPuntos(); // CONVIERTE LOS PUNTOS ACTUALES EN CHECKPOINT
+            levelController.LoadNextLevel(); // CARGA EL SIGUIENTE NIVEL
         }
     }
 }

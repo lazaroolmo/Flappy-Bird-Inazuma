@@ -19,7 +19,7 @@ public class TriggerActivator : MonoBehaviour
         // SI EL QUE HA ACTIVADO EL TRIGGER ES EL PLAYER
         if(other.CompareTag("Player"))
         {
-            // BUSCA EN EL PADRE LA VARIABLE A ACTIVAR
+            // BUSCA EN EL PADRE (MOVIMIENTO HACIA ARRIBA) LA VARIABLE A ACTIVAR
             GetComponentInParent<MovimientoRecto>().trigger_pasado = true;
         }
     }

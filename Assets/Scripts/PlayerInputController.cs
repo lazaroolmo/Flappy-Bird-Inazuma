@@ -11,7 +11,7 @@ public class PlayerInputController : MonoBehaviour
     Rigidbody rb;
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>(); // DEJA EL Rigidbody DEL PLAYER COMO REFERENCIA
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class PlayerInputController : MonoBehaviour
     {
         if(alive == true)
         {
-            transform.Translate(Vector3.right * speed * Time.deltaTime);
+            transform.Translate(Vector3.right * speed * Time.deltaTime); // MOVIMIENTO CONSTANTE
         }
 
         if (jump && alive == true)
@@ -32,10 +32,10 @@ public class PlayerInputController : MonoBehaviour
     {
         Debug.Log("Saltando...");
         rb.AddRelativeForce(Vector3.up * ThrustForce * Time.fixedDeltaTime);
-        jump = false;
+        jump = false; // INICIALIZO A 0
     }
 
-    public void OnJump(InputValue value)
+    public void OnJump(InputValue value) // SE EJECUTA EN EL MOMENTO DE PRESIONAR EL BOTÓN
     {
         jump = value.isPressed;
     }

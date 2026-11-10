@@ -6,7 +6,7 @@ public class ScoreBoardManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SeguidordePuntos.Instancia.IrAlCheckpoint();
+        SeguidordePuntos.Instancia.IrAlCheckpoint(); // CON CADA MUERTE LLAMA AL CHECKPOINT
         scoreBoardText.text = SeguidordePuntos.Instancia.puntos_actuales.ToString();
     }
 
@@ -20,8 +20,8 @@ public class ScoreBoardManager : MonoBehaviour
 
     public void IncreaseScore(int amount)
     {
-        SeguidordePuntos.Instancia.puntos_actuales += amount;
-        scoreBoardText.text = SeguidordePuntos.Instancia.puntos_actuales.ToString();
+        SeguidordePuntos.Instancia.puntos_actuales += amount; // AUMENTA LOS PUNTOS
+        scoreBoardText.text = SeguidordePuntos.Instancia.puntos_actuales.ToString(); // LOS CONVIERTE A TEXTO
     }
 
 }
